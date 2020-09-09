@@ -1,1 +1,8 @@
-{}
+{
+  "baseUrl": "https://pragmatic.agency",
+  "watchForFileChanges": false,
+  "env": {
+    "cookieMessage": "Accept All Cookies",
+    "cookieButtonSelector": "#cn-accept-cookie"
+  }
+}
