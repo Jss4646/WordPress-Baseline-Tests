@@ -1,0 +1,22 @@
+{
+  "name": "wordpress-baseline-tests",
+  "version": "1.0.0",
+  "description": "Baseline tests for WordPress sites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jss4646/WordPress-Baseline-Tests.git"
+  },
+  "author": "Jack Sandeman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jss4646/WordPress-Baseline-Tests/issues"
+  },
+  "homepage": "https://github.com/Jss4646/WordPress-Baseline-Tests#readme",
+  "dependencies": {
+    "cypress": "^5.1.0"
+  }
+}
