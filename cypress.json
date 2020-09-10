@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://beano.go-vip.net/",
+  "baseUrl": "https://pragmatic.agency",
   "watchForFileChanges": false,
   "env": {
     "cookieMessage": "Accept All Cookies",
