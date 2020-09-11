@@ -5,6 +5,7 @@ These are tests that should apply to most wordpress sites created by Pragmatic/A
 ## Setup
 - Pull repo
 - `npm install`
+- Add `CYPRESS_username` and `CYPRESS_password` (the username and password used to log into the site) to your environment variables
 - In `cypress.json` add 
   ```
   "baseUrl": "[Website to test]",
@@ -13,6 +14,7 @@ These are tests that should apply to most wordpress sites created by Pragmatic/A
     "cookieButtonSelector": "[CSS selector for the accept button on the cookie bar]"
   }
   ```
+  *There may be some data in here already from other sites. Looking to host a site specifically for checking these tests pass and will use the data from that.*
 - `npx cypress open` To run the tests using a GUI
 - `npx cypress run` To run the tests from the terminal
 

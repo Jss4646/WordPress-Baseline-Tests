@@ -1,6 +1,6 @@
 {
-  "baseUrl": "https://pragmatic.agency",
   "watchForFileChanges": false,
+  "baseUrl": "https://clariondevelop.wpengine.com/",
   "env": {
     "cookieMessage": "Accept All Cookies",
     "cookieButtonSelector": "#cn-accept-cookie"
