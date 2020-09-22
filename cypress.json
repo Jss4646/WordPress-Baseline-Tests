@@ -1,8 +1,9 @@
 {
   "watchForFileChanges": false,
-  "baseUrl": "https://clariondevelop.wpengine.com/",
+
+  "baseUrl": "http://baselinetests.local/",
   "env": {
-    "cookieMessage": "Accept All Cookies",
-    "cookieButtonSelector": "#cn-accept-cookie"
+    "cookieMessage": "Accept Cookies",
+    "cookieButtonSelector": ".accept-cookies-button"
   }
 }
