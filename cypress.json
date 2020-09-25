@@ -1,9 +1,13 @@
 {
   "watchForFileChanges": false,
-
   "baseUrl": "http://baselinetests.local/",
   "env": {
-    "cookieMessage": "Accept Cookies",
-    "cookieButtonSelector": ".accept-cookies-button"
-  }
+    "cookieButtonSelector": "#cn-accept-cookie",
+    "shopUrl": "/shop",
+    "cartUrl": "/cart"
+  },
+  "testFiles": [
+    "page-tests/**",
+    "site-tests/**"
+  ]
 }
