@@ -1,5 +1,6 @@
 describe('Product Tests', () => {
     before(function() {
+        Cypress.Cookies.debug(true)
         cy.visit(Cypress.env('shopUrl'));
 
         cy
@@ -33,5 +34,25 @@ describe('Product Tests', () => {
             .within(() => {
                 cy.contains(this.productTitle);
             });
+    })
+
+    it('Checks that you can remove a product from the cart', function() {
+        cy.visit(this.productPage);
+        cy
+            .get('.single_add_to_cart_button')
+            .click();
+
+        cy.wait(300);
+
+        cy.visit(Cypress.env('cartUrl'));
+
+        cy
+            .get('.woocommerce-cart-form__cart-item .remove')
+            .click()
+            .then(removeButton => {
+                cy
+                    .wrap(removeButton)
+                    .should('not.exist')
+            })
     })
 })

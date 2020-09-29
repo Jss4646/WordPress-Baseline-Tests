@@ -1,4 +1,4 @@
-describe('Cookie Bar Appears', () => {
+describe('Cookie Bar Tests', () => {
     before(() => {
         cy.visit('/');
         cy
@@ -16,6 +16,6 @@ describe('Cookie Bar Appears', () => {
 
         cy
             .get('@cookieButton')
-            .should('not.exist')
+            .should('not.be.visible')
     })
 });
