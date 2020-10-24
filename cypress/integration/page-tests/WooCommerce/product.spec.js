@@ -30,7 +30,21 @@ describe('Product Tests', () => {
             });
     })
 
-    it.skip('Checks that you can remove a product from the cart', function() {
+    it('Checks that you can access the checkout page from the cart', function () {
+        cy.addProductToCart(this.productPage);
+
+        cy.visit(Cypress.env('cartUrl'));
+
+        cy
+            .get('.checkout-button')
+            .click();
+
+        cy
+            .url()
+            .should('include', 'checkout')
+    })
+
+    it('Checks that you can remove a product from the cart', function() {
         cy.addProductToCart(this.productPage);
 
         cy.visit(Cypress.env('cartUrl'));
