@@ -1,6 +1,8 @@
 {
   "watchForFileChanges": false,
   "baseUrl": "http://baselinetests.local/",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
   "env": {
     "cookieButtonSelector": "#cookie_action_close_header",
     "shopUrl": "/shop",

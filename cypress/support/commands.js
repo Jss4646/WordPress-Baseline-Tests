@@ -38,3 +38,17 @@ Cypress.Commands.add('login', (username, password) => {
         form: true,
     })
 })
+
+/**
+ * Add a product to the cart using the product page
+ *
+ * @param {string} productPageUrl - The page of product you want to add to the cart
+ */
+Cypress.Commands.add('addProductToCart', productPageUrl => {
+    cy.visit(productPageUrl);
+    cy
+        .get('.single_add_to_cart_button')
+        .click();
+
+    cy.wait(300);
+})
