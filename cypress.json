@@ -1,8 +1,15 @@
 {
-  "baseUrl": "https://pragmatic.agency",
   "watchForFileChanges": false,
+  "baseUrl": "http://baselinetests.local/",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
   "env": {
-    "cookieMessage": "Accept All Cookies",
-    "cookieButtonSelector": "#cn-accept-cookie"
-  }
+    "cookieButtonSelector": "#cookie_action_close_header",
+    "shopUrl": "/shop",
+    "cartUrl": "/cart"
+  },
+  "testFiles": [
+    "page-tests/**",
+    "site-tests/**"
+  ]
 }

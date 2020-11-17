@@ -23,3 +23,32 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+/**
+ * Logs the user in using a username and password
+ * Will not work if the user is an admin as they need 2FA
+ *
+ * @param {string} username
+ * @param {string} password
+ */
+Cypress.Commands.add('login', (username, password) => {
+    cy.request({
+        url: '/wp-login.php?wpe-login=true',
+        body: `log=${username}&pwd=${password}&wp-submit=Log+In`,
+        method: 'POST',
+        form: true,
+    })
+})
+
+/**
+ * Add a product to the cart using the product page
+ *
+ * @param {string} productPageUrl - The page of product you want to add to the cart
+ */
+Cypress.Commands.add('addProductToCart', productPageUrl => {
+    cy.visit(productPageUrl);
+    cy
+        .get('.single_add_to_cart_button')
+        .click();
+
+    cy.wait(300);
+})
